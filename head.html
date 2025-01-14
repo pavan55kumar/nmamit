@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet"  href="hull.css">
+
+	<title>Calendar</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Event Calendar - NMAMIT</h1>
+		</header>
+		<div class="container-calendar">
+			<section id="calendar-controls">
+				<h2 id="monthAndYear"></h2>
+				<div class="navigation-buttons">
+					<button id="previous">‹</button>
+					<button id="next">›</button>
+				</div>
+				<div class="jump-controls">
+					<label for="month">Jump To:</label>
+					<select id="month"></select>
+					<select id="year"></select>
+				</div>
+			</section>
+			<table id="calendar">
+				<thead id="thead-month"></thead>
+				<tbody id="calendar-body"></tbody>
+			</table>
+		</div>
+		<div id="event-section">
+			<h3>Add Event</h3>
+			<button id="openModal">+ Add Event</button>
+			<ul id="reminderList"></ul>
+		</div>
+	</div>
+
+	<!-- Event Modal -->
+	<div id="eventModal" class="modal hidden">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h3>Add New Event</h3>
+			<input type="date" id="eventDate">
+			<input type="text" id="eventTitle" placeholder="Event Title">
+			<input type="text" id="eventDescription" placeholder="Event Description">
+			<button id="addEvent">Add Event</button>
+		</div>
+	</div>
+
+	<script src="head.js"></script>
+</body>
+
+</html>
